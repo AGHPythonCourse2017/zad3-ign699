@@ -79,7 +79,7 @@ class ArticleData:
         return self.article.keywords
 
     def getsum(self):
-        query = Query(self.article.keywords)
+        query = Query(self.article.summary)
         query.parse()
         links = query.gettopresults()
         linkstoread = []
