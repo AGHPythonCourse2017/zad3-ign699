@@ -52,6 +52,10 @@ class ArticleData:
         punctuation = self.checkpunctuation(title)
         if hasupper == 1 or punctuation == 1:
             print("Title might be a clickbait")
+        else:
+        	print("Title doesnt seem to be a clickbait")
+
+
 
     def checkhasupper(self, title):
         upperWords = 0
@@ -75,7 +79,7 @@ class ArticleData:
         return self.article.keywords
 
     def getsum(self):
-        query = Query(self.article.title)
+        query = Query(self.article.keywords)
         query.parse()
         links = query.gettopresults()
         linkstoread = []
